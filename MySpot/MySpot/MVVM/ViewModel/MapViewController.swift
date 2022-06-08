@@ -14,6 +14,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate{
         
         curlocationManager.requestAlwaysAuthorization()
 
+        tempInitFunc(map: map)
         
         if CLLocationManager.locationServicesEnabled() {
             curlocationManager.delegate = self

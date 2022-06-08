@@ -11,7 +11,20 @@ import GoogleMaps
 var MySpots: [GMSMarker] = []
 
 func tempInitFunc(map: GMSMapView){
-    addMySpot(CLLocationCoordinate2D(), map: <#T##GMSMapView#>)
+    addMySpot(
+        Spot(position: CLLocationCoordinate2D(latitude: 35.891, longitude: 128.611), color: .red),
+        map: map
+    )
+    
+    addMySpot(
+        Spot(position: CLLocationCoordinate2D(latitude: 35.889, longitude: 128.611), color: .red),
+        map: map
+    )
+
+    addMySpot(
+        Spot(position: CLLocationCoordinate2D(latitude: 35.889, longitude: 128.609), color: .red),
+        map: map
+    )
 }
 
 func addMySpot(_ newSpot :Spot, map: GMSMapView){
