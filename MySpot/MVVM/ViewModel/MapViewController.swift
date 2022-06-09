@@ -67,7 +67,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tempInitFunc(map: mapView)
+        tempInitFunc(map: mapView, SpotDataArray: &MySpots)
         
         if CLLocationManager.locationServicesEnabled() {
             curlocationManager.delegate = self

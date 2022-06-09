@@ -16,6 +16,7 @@ struct MainPage_Map: View{
     @State var tappedSpot: GMSMarker = GMSMarker()
     @State var ifUpdated: Bool = false
 
+    @Binding var isSlideOn: Bool
 
     var body: some View{
         GeometryReader{ geometry in
@@ -25,6 +26,9 @@ struct MainPage_Map: View{
                         Image(systemName: "person.circle.fill")
                             .resizable()
                             .frame(width: geometry.size.width*0.1, height: geometry.size.width*0.1)
+                            .onTapGesture {
+                                isSlideOn = true
+                            }
                         
                         Spacer()
                         
@@ -78,6 +82,7 @@ struct MainPage_Map: View{
                     .onTapGesture {
                         ifUpdated = true
                     }
+                
                 
                 SpotModalView(show: $showPopUp, tappedSpot: $tappedSpot)
             }
