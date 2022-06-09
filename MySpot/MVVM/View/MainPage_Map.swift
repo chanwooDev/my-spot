@@ -11,7 +11,7 @@ import GoogleMaps
 
 struct MainPage_Map: View{
     
-    @State var ifSpotStateMySpot = true
+    @State var curViewSelect = viewSelect.MySpots
     @State var showPopUp: Bool = false
     @State var tappedSpot: GMSMarker = GMSMarker()
 
@@ -30,27 +30,35 @@ struct MainPage_Map: View{
                         HStack(spacing: 0){
                             Text("내 스팟")
                                 .padding(10)
-                                .font(.system(size: 20))
-                                .foregroundColor(ifSpotStateMySpot ? .white : appColor)
-                                .background(ifSpotStateMySpot ? appColor : .white)
+                                .font(.system(size: 18))
+                                .foregroundColor(curViewSelect == .MySpots ? .white : appColor)
+                                .background(curViewSelect == .MySpots ? appColor : .white)
                                 .cornerRadius(25, corners: [.topLeft, .bottomLeft])
-                                .shadow(radius: 5)
                                 .onTapGesture {
-                                    ifSpotStateMySpot = true
+                                    curViewSelect = .MySpots
                                 }
                             
                             Text("친구 스팟")
                                 .padding(10)
-                                .font(.system(size: 20))
-                                .foregroundColor(ifSpotStateMySpot ? appColor : .white)
-                                .background(ifSpotStateMySpot ? .white : appColor)
-                                .cornerRadius(25, corners: [.topRight, .bottomRight])
-                                .shadow(radius: 5)
+                                .font(.system(size: 18))
+                                .foregroundColor(curViewSelect == .FriendSpots ? .white : appColor)
+                                .background(curViewSelect == .FriendSpots ? appColor : .white)
                                 .onTapGesture {
-                                    ifSpotStateMySpot = false
+                                    curViewSelect = .FriendSpots
                                 }
 
+                            Text("전체 스팟")
+                                .padding(10)
+                                .font(.system(size: 18))
+                                .foregroundColor(curViewSelect == .Spots ? .white : appColor)
+                                .background(curViewSelect == .Spots ? appColor : .white)
+                                .cornerRadius(25, corners: [.topRight, .bottomRight])
+                                .onTapGesture {
+                                    curViewSelect = .Spots
+                                }
                         }
+                        .shadow(radius: 5)
+
                     }
                     .padding(geometry.size.width * 0.04)
                     .frame(width: geometry.size.width, height: geometry.size.height / 8)
