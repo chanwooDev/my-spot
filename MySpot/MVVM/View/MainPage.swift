@@ -35,7 +35,7 @@ struct MainPage: View{
                             }
                         Divider()
                             .frame(width: 1, height: geometry.size.height / 9.2)
-                            .background(.mint)
+                            .background(appColor)
                         Text("스팟 목록")
                             .font(.system(size: 30))
                             .foregroundColor(.gray)

@@ -14,11 +14,12 @@ struct MainPage_Map: View{
     @State var curViewSelect = viewSelect.MySpots
     @State var showPopUp: Bool = false
     @State var tappedSpot: GMSMarker = GMSMarker()
+    @State var ifUpdated: Bool = false
 
 
     var body: some View{
         GeometryReader{ geometry in
-            ZStack{
+            ZStack(alignment: .top){
                 VStack(spacing: 0){
                     HStack(alignment: .center){
                         Image(systemName: "person.circle.fill")
@@ -64,8 +65,20 @@ struct MainPage_Map: View{
                     .frame(width: geometry.size.width, height: geometry.size.height / 8)
                     .background(.white)
                     
-                    MapViewControllerBridge(showPopUp: $showPopUp, tappedSpot: $tappedSpot)
+                    MapViewControllerBridge(showPopUp: $showPopUp, tappedSpot: $tappedSpot, curViewSelect: curViewSelect, ifUpdated: $ifUpdated)
                 }
+                
+                ifUpdated ? nil : Image(systemName: "arrow.clockwise.circle.fill")
+                    .foregroundColor(appColor)
+                    .background(Color.white)
+                    .cornerRadius(100)
+                    .font(.system(size: 40))
+                    .shadow(radius: 10)
+                    .padding(.top, geometry.size.height / 7)
+                    .onTapGesture {
+                        ifUpdated = true
+                    }
+                
                 SpotModalView(show: $showPopUp, tappedSpot: $tappedSpot)
             }
         }

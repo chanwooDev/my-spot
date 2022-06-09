@@ -4,15 +4,19 @@ import UIKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate{
 
-    let map =  GMSMapView(frame: .null)
+    let mapView =  GMSMapView(frame: .null)
     var isAnimating: Bool = false
 
     var showPopUp: Binding<Bool>
     var tappedSpot: Binding<GMSMarker>
+    let curViewSelect: viewSelect
+    var ifUpdated: Binding<Bool>
 
-    init(showPopUp: Binding<Bool>, tappedSpot: Binding<GMSMarker>) {
+    init(showPopUp: Binding<Bool>, tappedSpot: Binding<GMSMarker>, curViewSelect: viewSelect, ifUpdated: Binding<Bool>) {
         self.showPopUp = showPopUp
         self.tappedSpot = tappedSpot
+        self.curViewSelect = curViewSelect
+        self.ifUpdated = ifUpdated
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -23,12 +27,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     
     override func loadView() {
         super.loadView()
-        map.camera = GMSCameraPosition.camera(withLatitude: 35.89, longitude: 128.61, zoom: 15.0)
-        map.delegate = self
+        mapView.camera = GMSCameraPosition.camera(withLatitude: 35.89, longitude: 128.61, zoom: 15.0)
+        mapView.delegate = self
         
         curlocationManager.requestAlwaysAuthorization()
 
-        self.view = map
+        self.view = mapView
 
 //        print(curlocationManager.location?.coordinate.longitude))
 
@@ -63,7 +67,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tempInitFunc(map: map)
+        tempInitFunc(map: mapView)
         
         if CLLocationManager.locationServicesEnabled() {
             curlocationManager.delegate = self
@@ -74,11 +78,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
         let curLocation = GMSMarker()
         curLocation.position = getLocation() ?? CLLocationCoordinate2D(latitude: 35.89, longitude: 128.61)
         curLocation.icon = UIImage(systemName: "circle.fill")?.withTintColor(appUIColor)
-        curLocation.map = map
+        curLocation.map = mapView
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         showPopUp.wrappedValue = true
         return true // or false as needed.
+    }
+            
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+//        print(mapView.camera.zoom)
+//        print(mapView.camera.target.longitude)
+//        print(mapView.camera.target.latitude)
+        if mapView.camera.zoom < 14{
+            ifUpdated.wrappedValue = true
+        }
+        else{
+            ifUpdated.wrappedValue = false
+        }
     }
 }
