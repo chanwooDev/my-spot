@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F4E64B1282ABB0300A79C88 /* MySpotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E64B0282ABB0300A79C88 /* MySpotApp.swift */; };
-		2F4E64B3282ABB0300A79C88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E64B2282ABB0300A79C88 /* ContentView.swift */; };
+		2F42CE332850561500BA4A6A /* locationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F42CE322850561500BA4A6A /* locationManager.swift */; };
+		2F42CE362850686700BA4A6A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F42CE352850686700BA4A6A /* ContentView.swift */; };
+		2F42CE382850687A00BA4A6A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F42CE372850687A00BA4A6A /* MapViewController.swift */; };
+		2F42CE3A285068A200BA4A6A /* MySpots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F42CE39285068A200BA4A6A /* MySpots.swift */; };
+		2F42CE3C285068CC00BA4A6A /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F42CE3B285068CC00BA4A6A /* Spot.swift */; };
+		2F4D6E7628503AD900F702C1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D6E7528503AD900F702C1 /* Color.swift */; };
 		2F4E64B5282ABB0500A79C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E64B4282ABB0500A79C88 /* Assets.xcassets */; };
 		2F4E64B8282ABB0500A79C88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E64B7282ABB0500A79C88 /* Preview Assets.xcassets */; };
 		2F4E64C2282ABB0500A79C88 /* MySpotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E64C1282ABB0500A79C88 /* MySpotTests.swift */; };
 		2F4E64CC282ABB0500A79C88 /* MySpotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E64CB282ABB0500A79C88 /* MySpotUITests.swift */; };
 		2F4E64CE282ABB0500A79C88 /* MySpotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E64CD282ABB0500A79C88 /* MySpotUITestsLaunchTests.swift */; };
+		2F4E64DB282AC02400A79C88 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E64DA282AC02400A79C88 /* Podfile */; };
+		2FA99ABE283E34B8001F92A0 /* MVVM in Resources */ = {isa = PBXBuildFile; fileRef = 2FA99ABD283E34B8001F92A0 /* MVVM */; };
+		2FFFC010284F775000D9F535 /* MySpotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFC00D284F775000D9F535 /* MySpotApp.swift */; };
+		2FFFC011284F775000D9F535 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFC00E284F775000D9F535 /* SearchViewController.swift */; };
+		2FFFC012284F775000D9F535 /* Model in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFC00F284F775000D9F535 /* Model */; };
+		2FFFC01A284F777700D9F535 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFC017284F777700D9F535 /* MainPage.swift */; };
+		2FFFC01B284F777700D9F535 /* MainPage_Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFC018284F777700D9F535 /* MainPage_Map.swift */; };
+		2FFFC01C284F777700D9F535 /* MainPage_SpotList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFC019284F777700D9F535 /* MainPage_SpotList.swift */; };
+		2FFFC01F284F778A00D9F535 /* MainPageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFC01D284F778A00D9F535 /* MainPageVM.swift */; };
+		2FFFC020284F778A00D9F535 /* MapViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFC01E284F778A00D9F535 /* MapViewControllerBridge.swift */; };
+		5F52F2C10D7A7BAF55798CA1 /* libPods-MySpot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CF916CED3684263B4234B3 /* libPods-MySpot.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +49,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F42CE322850561500BA4A6A /* locationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = locationManager.swift; path = MySpot/MVVM/Model/locationManager.swift; sourceTree = "<group>"; };
+		2F42CE352850686700BA4A6A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = MySpot/MVVM/View/ContentView.swift; sourceTree = "<group>"; };
+		2F42CE372850687A00BA4A6A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = MySpot/MVVM/ViewModel/MapViewController.swift; sourceTree = "<group>"; };
+		2F42CE39285068A200BA4A6A /* MySpots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MySpots.swift; path = MySpot/MVVM/Model/MySpots.swift; sourceTree = "<group>"; };
+		2F42CE3B285068CC00BA4A6A /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Spot.swift; path = MySpot/MVVM/Model/Spot.swift; sourceTree = "<group>"; };
+		2F4D6E7528503AD900F702C1 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Color.swift; path = MySpot/MVVM/Color.swift; sourceTree = "<group>"; };
+		2F4D6E772850497300F702C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2F4E64AD282ABB0300A79C88 /* MySpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F4E64B0282ABB0300A79C88 /* MySpotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotApp.swift; sourceTree = "<group>"; };
-		2F4E64B2282ABB0300A79C88 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2F4E64B4282ABB0500A79C88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F4E64B7282ABB0500A79C88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F4E64BD282ABB0500A79C88 /* MySpotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySpotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +64,19 @@
 		2F4E64C7282ABB0500A79C88 /* MySpotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySpotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4E64CB282ABB0500A79C88 /* MySpotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotUITests.swift; sourceTree = "<group>"; };
 		2F4E64CD282ABB0500A79C88 /* MySpotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2F4E64DA282AC02400A79C88 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2FA99ABD283E34B8001F92A0 /* MVVM */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MVVM; sourceTree = "<group>"; };
+		2FFFC00D284F775000D9F535 /* MySpotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MySpotApp.swift; path = MySpot/MVVM/MySpotApp.swift; sourceTree = "<group>"; };
+		2FFFC00E284F775000D9F535 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = MySpot/MVVM/SearchViewController.swift; sourceTree = "<group>"; };
+		2FFFC00F284F775000D9F535 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Model; path = MySpot/MVVM/Model; sourceTree = "<group>"; };
+		2FFFC017284F777700D9F535 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainPage.swift; path = MySpot/MVVM/View/MainPage.swift; sourceTree = "<group>"; };
+		2FFFC018284F777700D9F535 /* MainPage_Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainPage_Map.swift; path = MySpot/MVVM/View/MainPage_Map.swift; sourceTree = "<group>"; };
+		2FFFC019284F777700D9F535 /* MainPage_SpotList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainPage_SpotList.swift; path = MySpot/MVVM/View/MainPage_SpotList.swift; sourceTree = "<group>"; };
+		2FFFC01D284F778A00D9F535 /* MainPageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainPageVM.swift; path = MySpot/MVVM/ViewModel/MainPageVM.swift; sourceTree = "<group>"; };
+		2FFFC01E284F778A00D9F535 /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewControllerBridge.swift; path = MySpot/MVVM/ViewModel/MapViewControllerBridge.swift; sourceTree = "<group>"; };
+		A2DB562E7A307667B21C1AAB /* Pods-MySpot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpot.debug.xcconfig"; path = "Target Support Files/Pods-MySpot/Pods-MySpot.debug.xcconfig"; sourceTree = "<group>"; };
+		A8CF916CED3684263B4234B3 /* libPods-MySpot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MySpot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF8C858F7F822FD20F5A5872 /* Pods-MySpot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpot.release.xcconfig"; path = "Target Support Files/Pods-MySpot/Pods-MySpot.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F52F2C10D7A7BAF55798CA1 /* libPods-MySpot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,10 +108,27 @@
 		2F4E64A4282ABB0300A79C88 = {
 			isa = PBXGroup;
 			children = (
+				2F42CE39285068A200BA4A6A /* MySpots.swift */,
+				2F42CE3B285068CC00BA4A6A /* Spot.swift */,
+				2F42CE372850687A00BA4A6A /* MapViewController.swift */,
+				2F42CE352850686700BA4A6A /* ContentView.swift */,
+				2F42CE322850561500BA4A6A /* locationManager.swift */,
+				2F4D6E7528503AD900F702C1 /* Color.swift */,
+				2FFFC01D284F778A00D9F535 /* MainPageVM.swift */,
+				2FFFC01E284F778A00D9F535 /* MapViewControllerBridge.swift */,
+				2FFFC018284F777700D9F535 /* MainPage_Map.swift */,
+				2FFFC019284F777700D9F535 /* MainPage_SpotList.swift */,
+				2FFFC017284F777700D9F535 /* MainPage.swift */,
+				2FFFC00F284F775000D9F535 /* Model */,
+				2FFFC00D284F775000D9F535 /* MySpotApp.swift */,
+				2FFFC00E284F775000D9F535 /* SearchViewController.swift */,
+				2F4E64DA282AC02400A79C88 /* Podfile */,
 				2F4E64AF282ABB0300A79C88 /* MySpot */,
 				2F4E64C0282ABB0500A79C88 /* MySpotTests */,
 				2F4E64CA282ABB0500A79C88 /* MySpotUITests */,
 				2F4E64AE282ABB0300A79C88 /* Products */,
+				C144447621515BFB81FF4314 /* Pods */,
+				C6D42F5E67BB43A91003155C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +145,8 @@
 		2F4E64AF282ABB0300A79C88 /* MySpot */ = {
 			isa = PBXGroup;
 			children = (
-				2F4E64B0282ABB0300A79C88 /* MySpotApp.swift */,
-				2F4E64B2282ABB0300A79C88 /* ContentView.swift */,
+				2F4D6E772850497300F702C1 /* Info.plist */,
+				2FA99ABD283E34B8001F92A0 /* MVVM */,
 				2F4E64B4282ABB0500A79C88 /* Assets.xcassets */,
 				2F4E64B6282ABB0500A79C88 /* Preview Content */,
 			);
@@ -127,6 +178,23 @@
 			path = MySpotUITests;
 			sourceTree = "<group>";
 		};
+		C144447621515BFB81FF4314 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2DB562E7A307667B21C1AAB /* Pods-MySpot.debug.xcconfig */,
+				FF8C858F7F822FD20F5A5872 /* Pods-MySpot.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C6D42F5E67BB43A91003155C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8CF916CED3684263B4234B3 /* libPods-MySpot.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F4E64D1282ABB0500A79C88 /* Build configuration list for PBXNativeTarget "MySpot" */;
 			buildPhases = (
-				2F4E64A9282ABB0300A79C88 /* Sources */,
+				518E894666E1AD4D01273C3A /* [CP] Check Pods Manifest.lock */,
 				2F4E64AA282ABB0300A79C88 /* Frameworks */,
+				2FFFC00C284F773200D9F535 /* Sources */,
 				2F4E64AB282ABB0300A79C88 /* Resources */,
+				AFE402C48AF7F028EB8765F6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,7 +301,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F4E64DB282AC02400A79C88 /* Podfile in Resources */,
 				2F4E64B8282ABB0500A79C88 /* Preview Assets.xcassets in Resources */,
+				2FA99ABE283E34B8001F92A0 /* MVVM in Resources */,
 				2F4E64B5282ABB0500A79C88 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,16 +324,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXSourcesBuildPhase section */
-		2F4E64A9282ABB0300A79C88 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXShellScriptBuildPhase section */
+		518E894666E1AD4D01273C3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F4E64B3282ABB0300A79C88 /* ContentView.swift in Sources */,
-				2F4E64B1282ABB0300A79C88 /* MySpotApp.swift in Sources */,
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MySpot-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
+		AFE402C48AF7F028EB8765F6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MySpot/Pods-MySpot-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MySpot/Pods-MySpot-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MySpot/Pods-MySpot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
 		2F4E64B9282ABB0500A79C88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -276,6 +381,27 @@
 			files = (
 				2F4E64CE282ABB0500A79C88 /* MySpotUITestsLaunchTests.swift in Sources */,
 				2F4E64CC282ABB0500A79C88 /* MySpotUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FFFC00C284F773200D9F535 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F42CE382850687A00BA4A6A /* MapViewController.swift in Sources */,
+				2F42CE362850686700BA4A6A /* ContentView.swift in Sources */,
+				2F42CE332850561500BA4A6A /* locationManager.swift in Sources */,
+				2FFFC01F284F778A00D9F535 /* MainPageVM.swift in Sources */,
+				2FFFC020284F778A00D9F535 /* MapViewControllerBridge.swift in Sources */,
+				2F42CE3C285068CC00BA4A6A /* Spot.swift in Sources */,
+				2FFFC01A284F777700D9F535 /* MainPage.swift in Sources */,
+				2F42CE3A285068A200BA4A6A /* MySpots.swift in Sources */,
+				2FFFC01B284F777700D9F535 /* MainPage_Map.swift in Sources */,
+				2FFFC01C284F777700D9F535 /* MainPage_SpotList.swift in Sources */,
+				2F4D6E7628503AD900F702C1 /* Color.swift in Sources */,
+				2FFFC010284F775000D9F535 /* MySpotApp.swift in Sources */,
+				2FFFC011284F775000D9F535 /* SearchViewController.swift in Sources */,
+				2FFFC012284F775000D9F535 /* Model in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +537,7 @@
 		};
 		2F4E64D2282ABB0500A79C88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2DB562E7A307667B21C1AAB /* Pods-MySpot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -419,6 +546,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MySpot/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MySpot/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"Use Location\"";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Use Location\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -439,6 +569,7 @@
 		};
 		2F4E64D3282ABB0500A79C88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF8C858F7F822FD20F5A5872 /* Pods-MySpot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -447,6 +578,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MySpot/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MySpot/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"Use Location\"";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Use Location\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
