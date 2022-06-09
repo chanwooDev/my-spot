@@ -12,3 +12,9 @@ enum MainScreen{
     case map
     case spotList
 }
+
+enum viewSelect{
+    case Spots
+    case MySpots
+    case FriendSpots
+}

@@ -33,5 +33,6 @@ func addMySpot(_ newSpot :Spot, map: GMSMapView){
     marker.icon = GMSMarker.markerImage(with: newSpot.color)
     marker.map = map
     
+    
     MySpots.append(marker)
 }

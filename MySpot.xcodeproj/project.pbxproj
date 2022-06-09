@@ -19,6 +19,7 @@
 		2F4E64CC282ABB0500A79C88 /* MySpotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E64CB282ABB0500A79C88 /* MySpotUITests.swift */; };
 		2F4E64CE282ABB0500A79C88 /* MySpotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E64CD282ABB0500A79C88 /* MySpotUITestsLaunchTests.swift */; };
 		2F4E64DB282AC02400A79C88 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E64DA282AC02400A79C88 /* Podfile */; };
+		2F5ADC4B2851E78F00F02955 /* SpotModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5ADC4A2851E78F00F02955 /* SpotModalView.swift */; };
 		2FA99ABE283E34B8001F92A0 /* MVVM in Resources */ = {isa = PBXBuildFile; fileRef = 2FA99ABD283E34B8001F92A0 /* MVVM */; };
 		2FFFC010284F775000D9F535 /* MySpotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFC00D284F775000D9F535 /* MySpotApp.swift */; };
 		2FFFC011284F775000D9F535 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFC00E284F775000D9F535 /* SearchViewController.swift */; };
@@ -65,6 +66,7 @@
 		2F4E64CB282ABB0500A79C88 /* MySpotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotUITests.swift; sourceTree = "<group>"; };
 		2F4E64CD282ABB0500A79C88 /* MySpotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2F4E64DA282AC02400A79C88 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2F5ADC4A2851E78F00F02955 /* SpotModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpotModalView.swift; path = MySpot/MVVM/View/SpotModalView.swift; sourceTree = "<group>"; };
 		2FA99ABD283E34B8001F92A0 /* MVVM */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MVVM; sourceTree = "<group>"; };
 		2FFFC00D284F775000D9F535 /* MySpotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MySpotApp.swift; path = MySpot/MVVM/MySpotApp.swift; sourceTree = "<group>"; };
 		2FFFC00E284F775000D9F535 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = MySpot/MVVM/SearchViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				2F42CE39285068A200BA4A6A /* MySpots.swift */,
+				2F5ADC4A2851E78F00F02955 /* SpotModalView.swift */,
 				2F42CE3B285068CC00BA4A6A /* Spot.swift */,
 				2F42CE372850687A00BA4A6A /* MapViewController.swift */,
 				2F42CE352850686700BA4A6A /* ContentView.swift */,
@@ -394,6 +397,7 @@
 				2FFFC01F284F778A00D9F535 /* MainPageVM.swift in Sources */,
 				2FFFC020284F778A00D9F535 /* MapViewControllerBridge.swift in Sources */,
 				2F42CE3C285068CC00BA4A6A /* Spot.swift in Sources */,
+				2F5ADC4B2851E78F00F02955 /* SpotModalView.swift in Sources */,
 				2FFFC01A284F777700D9F535 /* MainPage.swift in Sources */,
 				2F42CE3A285068A200BA4A6A /* MySpots.swift in Sources */,
 				2FFFC01B284F777700D9F535 /* MainPage_Map.swift in Sources */,
