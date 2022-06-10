@@ -1,0 +1,27 @@
+{
+  "images" : [
+    {
+      "alignment-insets" : {
+        "bottom" : 300,
+        "left" : 0,
+        "right" : 0,
+        "top" : 300
+      },
+      "filename" : "gop.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

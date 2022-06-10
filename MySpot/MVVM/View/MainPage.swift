@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import FirebaseCore
+import FirebaseFirestore
+import GoogleMaps
 
 struct MainPage: View{
     
     @State private var screenNum = MainScreen.map
     @State var isSlideOn: Bool = false
     @State var isClickedAddFriendButton: Bool = false
+    @State var showPopUp: Bool = false
     
     var body: some View{
         GeometryReader{ geometry in
@@ -19,9 +23,9 @@ struct MainPage: View{
                 VStack(spacing: 0){
                     switch(screenNum){
                     case .map:
-                        MainPage_Map(isSlideOn: $isSlideOn)
+                        MainPage_Map( showPopUp: showPopUp, tappedSpot: GMSMarker(), isSlideOn: $isSlideOn)
                     case .spotList:
-                        MainPage_SpotList()
+                        MainPage_SpotList(screenNum: $screenNum, showPopUp: $showPopUp)
                     }
                     
                     HStack{
@@ -45,6 +49,19 @@ struct MainPage: View{
                                 .frame(width: geometry.size.width * 0.5, height: geometry.size.height / 8)
                                 .onTapGesture {
                                     screenNum = .spotList
+                                    let db = Firestore.firestore()
+                                    db.collection("user").whereField("email", isEqualTo: "test")
+                                        .getDocuments() { (querySnapshot, err) in
+                                            if let err = err {
+                                                print("Error getting documents: \(err)")
+                                            } else {
+                                                for document in querySnapshot!.documents {
+                                                    let data = document.data()
+                                                    print(data["spots"]!)
+                                                }
+                                            }
+                                            
+                                        }
                                 }
                         case .spotList:
                             Text("지도")
@@ -60,7 +77,7 @@ struct MainPage: View{
                             Text("스팟 목록")
                                 .font(.system(size: 30))
                                 .fontWeight(.bold)
-                                .foregroundColor(.mint)
+                                .foregroundColor(appColor)
                                 .shadow(radius: 5)
                                 .frame(width: geometry.size.width * 0.5, height: geometry.size.height / 8)
                                 .onTapGesture {

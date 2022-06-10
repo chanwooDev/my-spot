@@ -8,9 +8,9 @@
 import SwiftUI
 import GoogleMaps
 
-struct Spot{
-    
-    var position: CLLocationCoordinate2D
-    var color: UIColor
-    
-}
+//struct Spot{
+//    
+//    var position: CLLocationCoordinate2D
+//    var color: UIColor
+//    
+//}
