@@ -13,9 +13,15 @@ struct MainPage_Map: View{
     
     @State var curViewSelect = viewSelect.MySpots
     @State var showPopUp: Bool = false
-    @State var tappedSpot: GMSMarker = GMSMarker()
+    @State var currentSpot = MySpot(lat: 0, lng: 0)
+    @State var tappedSpot: GMSMarker{
+        didSet(newValue){
+            currentSpot = curSpot(lat: newValue.position.latitude, lng: newValue.position.longitude)
+        }
+    }
     @State var ifUpdated: Bool = false
 
+    @Binding var isSlideOn: Bool
 
     var body: some View{
         GeometryReader{ geometry in
@@ -25,6 +31,9 @@ struct MainPage_Map: View{
                         Image(systemName: "person.circle.fill")
                             .resizable()
                             .frame(width: geometry.size.width*0.1, height: geometry.size.width*0.1)
+                            .onTapGesture {
+                                isSlideOn = true
+                            }
                         
                         Spacer()
                         
@@ -65,7 +74,15 @@ struct MainPage_Map: View{
                     .frame(width: geometry.size.width, height: geometry.size.height / 8)
                     .background(.white)
                     
-                    MapViewControllerBridge(showPopUp: $showPopUp, tappedSpot: $tappedSpot, curViewSelect: curViewSelect, ifUpdated: $ifUpdated)
+                    switch curViewSelect {
+                    case .Spots:
+                        MapViewControllerBridge(showPopUp: $showPopUp, tappedSpot: $tappedSpot, curViewSelect: curViewSelect, ifUpdated: $ifUpdated)
+                    case .MySpots:
+                        MapViewControllerBridge(showPopUp: $showPopUp, tappedSpot: $tappedSpot, curViewSelect: curViewSelect, ifUpdated: $ifUpdated)
+                    case .FriendSpots:
+                        MapViewControllerBridge(showPopUp: $showPopUp, tappedSpot: $tappedSpot, curViewSelect: curViewSelect, ifUpdated: $ifUpdated)
+
+                    }
                 }
                 
                 ifUpdated ? nil : Image(systemName: "arrow.clockwise.circle.fill")
@@ -77,10 +94,13 @@ struct MainPage_Map: View{
                     .padding(.top, geometry.size.height / 7)
                     .onTapGesture {
                         ifUpdated = true
+                        getNears(startLat: "35.892492", endLat: "35.893625", startLng: "128.607698", endLng: "128.610561")
                     }
                 
-                SpotModalView(show: $showPopUp, tappedSpot: $tappedSpot)
+                
+                SpotModalView(show: $showPopUp, tappedSpot: $tappedSpot, curSpot: currentSpot)
             }
         }
     }
 }
+

@@ -9,6 +9,8 @@ import SwiftUI
 
 import GoogleMaps
 import GooglePlaces
+import FirebaseCore
+import FirebaseFirestore
 
 struct ContentView: View {
     
@@ -22,6 +24,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         GMSServices.provideAPIKey("AIzaSyB--63e9h10Slq6zGznQ7elXbKac4nj5EE")
         GMSPlacesClient.provideAPIKey("AIzaSyB--63e9h10Slq6zGznQ7elXbKac4nj5EE")
+        FirebaseApp.configure()
         return true
     }
 }

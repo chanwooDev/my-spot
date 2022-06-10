@@ -27,7 +27,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     
     override func loadView() {
         super.loadView()
-        mapView.camera = GMSCameraPosition.camera(withLatitude: 35.89, longitude: 128.61, zoom: 15.0)
+        mapView.camera = GMSCameraPosition.camera(withLatitude: 35.892442, longitude: 128.609194, zoom: 18.0)
         mapView.delegate = self
         
         curlocationManager.requestAlwaysAuthorization()
@@ -67,13 +67,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tempInitFunc(map: mapView)
+//        tempInitFunc(map: mapView, SpotDataArray: &MySpotsMarker)
         
         if CLLocationManager.locationServicesEnabled() {
             curlocationManager.delegate = self
             curlocationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             curlocationManager.startUpdatingLocation()
         }
+        
+        switch curViewSelect {
+        case .Spots:
+            markSpotsLocation1(map: mapView)
+        case .MySpots:
+            markSpotsLocation2(map: mapView)
+        case .FriendSpots:
+            markSpotsLocation3(map: mapView)
+        }
+
         
         let curLocation = GMSMarker()
         curLocation.position = getLocation() ?? CLLocationCoordinate2D(latitude: 35.89, longitude: 128.61)
@@ -83,6 +93,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         showPopUp.wrappedValue = true
+        tappedSpot.wrappedValue = marker
         return true // or false as needed.
     }
             
@@ -90,11 +101,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
 //        print(mapView.camera.zoom)
 //        print(mapView.camera.target.longitude)
 //        print(mapView.camera.target.latitude)
-        if mapView.camera.zoom < 14{
+        if mapView.camera.zoom < 15{
             ifUpdated.wrappedValue = true
         }
         else{
             ifUpdated.wrappedValue = false
+            if SpotsLocation.count != 0{
+                print(SpotsLocation[0].longitude)
+            }
         }
     }
 }

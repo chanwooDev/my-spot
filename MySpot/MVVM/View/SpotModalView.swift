@@ -10,6 +10,9 @@ struct SpotModalView: View{
     let address: String = ""
     let phNum: String = ""
     
+    let curSpot: MySpot
+    
+    
     var body: some View{
         GeometryReader{ geometry in
         
@@ -21,7 +24,7 @@ struct SpotModalView: View{
                     // PopUp Window
                     VStack(alignment: .leading, spacing: 0) {
                         HStack{
-                            Text(name)
+                            Text("박준오 선산곱창")
                                 .font(.system(size: 30))
                             Spacer()
                             Button(action: {
@@ -39,19 +42,27 @@ struct SpotModalView: View{
                         
                         Spacer()
                         
+                        HStack{
+                            Spacer()
+                            Image(uiImage: UIImage(named: "gop")!)
+                                .resizable()
+                                .frame(width: 300, height: 150)
+//                                .frame(maxWidth: geometry.size.height * 0.8, maxHeight: geometry.size.height * 0.8)
+                            Spacer()
+                        }
+                        
                         VStack(alignment: .leading){
-                            Image(systemName: "icloud.slash")
-                                .frame(maxWidth: geometry.size.width * 0.8, maxHeight: geometry.size.height * 0.2)
                             Text("주소")
                                 .font(.system(size: 20))
                                 .foregroundColor(.black)
                                 .opacity(0.5)
-                            Text(address)
+                            Text("대구 동구 평화로 8-1")
+                            Text("헤레이스 305호")
                             Text("전화번호")
                                 .font(.system(size: 20))
                                 .foregroundColor(.black)
                                 .opacity(0.5)
-                            Text(phNum)
+                            Text("010-6810-9801")
                         }
                         .padding(geometry.size.width * 0.04)
                         
@@ -66,7 +77,7 @@ struct SpotModalView: View{
                         .frame(maxWidth: geometry.size.width * 0.8, maxHeight: geometry.size.height * 0.07)
                         .border(Color.gray, width: 1)
                     }
-                    .frame(maxWidth: geometry.size.width * 0.8, maxHeight: geometry.size.height * 0.5)
+                    .frame(maxWidth: geometry.size.width * 0.8, maxHeight: geometry.size.height * 0.7)
                     .background(.white)
                     .cornerRadius(CGFloat(20))
                 }
